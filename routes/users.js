@@ -33,7 +33,6 @@ router.get("/:id?", function (req, res, next) {
 
 router.post("/signIn", async function (req, res, next) {
   console.log(req.body);
-  if (req.body.username.trim() !== "" && req.body.password.trim()) {
     const data = await user.login(req.body);
     if (data.code == 1) {
       res
@@ -43,9 +42,7 @@ router.post("/signIn", async function (req, res, next) {
     } else {
       res.status(403).json('Incorrect user or password');
     }
-  } else {
-    res.status(500).json('Incorrect data')
-  }
+
 
 });
 
