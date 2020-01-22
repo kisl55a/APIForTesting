@@ -3,9 +3,9 @@ require("dotenv").config();
 module.exports = {
   client: "mysql",
   connection: {
-    host: "localhost",
-    user: "root",
-    // password: "root",
+    host: "database-2.ckqfrbqbybou.us-east-1.rds.amazonaws.com",
+    user: "admin",
+    password: "adminadmin",
     port: 3306,
     database: "weatherAPI",
     pool: {
